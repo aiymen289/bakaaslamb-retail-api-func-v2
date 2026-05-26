@@ -2,6 +2,17 @@ from dataclasses import dataclass
 from typing import Optional
 
 @dataclass
+class BatchItem:
+    batch_code: str = ""
+    product_name: str = ""
+    category: str = ""
+    cost_price: float = 0.0
+    retail_price: float = 0.0
+    quantity_on_hand: int = 0
+    average_daily_sales: float = 0.0
+    expiry_date: str = ""
+
+@dataclass
 class ConfigThresholds:
     expiring_soon_days: int = 7
     stockout_risk_doc: float = 3.0
